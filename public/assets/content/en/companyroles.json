@@ -839,7 +839,7 @@
       {
         "title": "Register Companies",
         "description": "In the first implementation level provided with end of 2023, the OSP is able to push registrations of new CX members via an CSP provided partnerRegistration endpoint.<1></1><1></1>To call the endpoint, the OSP needs to follow the endpoint strutcure and create an technical user which is used for the endpoint authentication.<1></1><1></1>The technical user can get found in the technical user self-service<1></1><1></1>",
-        "imagePath": "/images/content/osp-registration.png",
+        "imagePath": "/images/content/osp-registration.svg",
         "backgroundColor": "#FFFFFF",
         "id": "register-companies-id",
         "template": "TextImageSideBySideWithSections",
