@@ -1,6 +1,6 @@
 {
   "path": "architecture",
-  "name": "Construct-X Architecture Documentation",
+  "name": "Arena-X Architecture Documentation",
   "children": [
     {
       "path": "architecture/Architecture Constraints.md",

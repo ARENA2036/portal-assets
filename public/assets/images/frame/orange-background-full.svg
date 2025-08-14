@@ -1,9 +1,16 @@
-<svg width="1440" height="216" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="newGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1f3a6f" />
-      <stop offset="100%" stop-color="#0e3f7f" />
-    </linearGradient>
-  </defs>
-  <rect width="1440" height="216" fill="url(#newGradient)" />
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 216" width="1440" height="216">
+	<title>Subtract-svg</title>
+	<defs>
+		<linearGradient id="g1" x1="0" y1="0" x2="1440" y2="216" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#FFA500"/>
+			<stop offset="0.2" stop-color="#FF8C00"/>
+			<stop offset="0.5" stop-color="#FF6600"/>
+			<stop offset="0.8" stop-color="#FF4500"/>
+			<stop offset="1" stop-color="#FF0000"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) }
+	</style>
+	<rect class="s0" width="1440" height="216"/>
 </svg>

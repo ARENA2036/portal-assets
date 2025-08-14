@@ -20,7 +20,7 @@
 ###############################################################
 
 #
-# Construct-X Assets Repository Bash Helpers
+# Arena-XAssets Repository Bash Helpers
 # 
 # usage:
 #       source scripts/repo.sh

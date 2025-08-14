@@ -1,16 +1,16 @@
 [
   {
     "id": "1",
-    "title": "EDC 0.3.0 Major Version",
-    "subtitle": "Construct-X",
-    "description": "With March 2023 - the new EDC Version 0.3.x will be available and is to be used for upcoming 3.1 e2e tests",
+    "title": "EDC 0.10.0 Major Version",
+    "subtitle": "Arena-X",
+    "description": "With June 2025 - the new EDC Version 0.10.x will be available and is to be used for upcoming e2e tests",
     "readMoreText": "Get Change Details",
-    "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/blob/main/CHANGELOG.md#030---2023-02-20"
+    "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/releases/tag/0.10.0"
   },
   {
     "id": "2",
-    "title": "Test of Release 3.1 starting on 03rd of April",
-    "subtitle": "Construct-X",
+    "title": "Test of Release 9.1 starting on 03rd of April",
+    "subtitle": "Arena-X",
     "description": "Next round of e2e Test is starting soon. Contact the Test Management to get part of it",
     "readMoreText": "",
     "readMoreLink": ""
@@ -18,7 +18,7 @@
   {
     "id": "3",
     "title": "New Notification Service",
-    "subtitle": "Construct-X",
+    "subtitle": "Arena-X",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "readMoreText": "Read more",
     "readMoreLink": "#"

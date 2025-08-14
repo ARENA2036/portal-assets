@@ -1,7 +1,7 @@
 {
   "name": "cx-portal-assets",
   "version": "v2.4.0",
-  "description": "Shared frontend content and static assets for the Construct-X Portal",
+  "description": "Shared frontend content and static assets for the Arena-X Portal",
   "main": "index.js",
   "repository": "git@github.com:eclipse-tractusx/portal-assets.git",
   "license": "Apache-2.0",
