@@ -75,11 +75,11 @@ const createDocsMetadata = (version) => {
   version ||= 'main'
 
   const DOCS = {
-    admin: 'Arena-X Admin Documentation',
-    api: 'Arena-X API Documentation',
-    architecture: 'Arena-X Architecture Documentation',
-    developer: 'Arena-X Developer Documentation',
-    user: 'Arena-X Help Desk',
+    admin: 'ARENA2036-X Admin Documentation',
+    api: 'ARENA2036-X API Documentation',
+    architecture: 'ARENA2036-X Architecture Documentation',
+    developer: 'ARENA2036-X Developer Documentation',
+    user: 'ARENA2036-X Help Desk',
   }
 
   Object.entries(DOCS).forEach((item) => {

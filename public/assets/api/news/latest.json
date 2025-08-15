@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "EDC 0.10.0 Major Version",
-    "subtitle": "Arena-X",
+    "subtitle": "ARENA2036-X",
     "description": "With June 2025 - the new EDC Version 0.10.x will be available and is to be used for upcoming e2e tests",
     "readMoreText": "Get Change Details",
     "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/releases/tag/0.10.0"
@@ -10,7 +10,7 @@
   {
     "id": "2",
     "title": "Test of Release 9.1 starting on 03rd of April",
-    "subtitle": "Arena-X",
+    "subtitle": "ARENA2036-X",
     "description": "Next round of e2e Test is starting soon. Contact the Test Management to get part of it",
     "readMoreText": "",
     "readMoreLink": ""
@@ -18,7 +18,7 @@
   {
     "id": "3",
     "title": "New Notification Service",
-    "subtitle": "Arena-X",
+    "subtitle": "ARENA2036-X",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "readMoreText": "Read more",
     "readMoreLink": "#"

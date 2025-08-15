@@ -1,6 +1,6 @@
 {
   "path": "architecture",
-  "name": "Arena-X Architecture Documentation",
+  "name": "ARENA2036-X Architecture Documentation",
   "children": [
     {
       "path": "architecture/Architecture Constraints.md",

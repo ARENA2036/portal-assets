@@ -20,7 +20,7 @@
 ###############################################################
 
 #
-# Arena-XAssets Repository Bash Helpers
+# ARENA2036-X Assets Repository Bash Helpers
 # 
 # usage:
 #       source scripts/repo.sh
