@@ -112,8 +112,8 @@ jobs:
       - name: Run Trivy on image
         run: |
           trivy image --format sarif --output trivy-results2.sarif --skip-version-check \
-            ${{ env.IMAGE_NAME }}:latest          
-
+            ${{ secrets.AZURE_URL }}/${{ env.IMAGE_NAME }}:latest
+            
       ######## The old trivy-action approach is now commented out because it is outdated: ########
 
       # It's also possible to scan your private registry with Trivy's built-in image scan.
