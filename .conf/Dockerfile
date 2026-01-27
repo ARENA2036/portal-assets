@@ -1,6 +1,5 @@
 ###############################################################
 # Copyright (c) 2022 Contributors to the Eclipse Foundation
-# Copyright (c) 2026 ARENA2036 e.V
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -31,7 +30,6 @@
 
 # Step 1
 FROM alpine:3.21 as build-step
-RUN apk update && apk upgrade --no-cache
 COPY public /public
 WORKDIR /public/assets
 RUN find . -type f | cut -c 3- | sort > index.txt
@@ -39,10 +37,7 @@ WORKDIR /public/documentation
 RUN find . -type f | cut -c 3- | sort > index.txt
 
 # Step 2
-FROM nginxinc/nginx-unprivileged:1.27-alpine3.21
-# upgrade Alpine packages in runtime image (libpng CVE)
-USER root
-RUN apk update && apk upgrade --no-cache
+FROM nginxinc/nginx-unprivileged:alpine
 COPY .conf/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build-step /public/assets /usr/share/nginx/html/assets
 COPY --from=build-step /public/documentation /usr/share/nginx/html/documentation
