@@ -1,15 +1,15 @@
 [
   {
     "id": "1",
-    "title": "EDC 0.3.0 Major Version",
+    "title": "EDC 0.12.0 Major Version",
     "subtitle": "ReDriveS",
-    "description": "With March 2023 - the new EDC Version 0.3.x will be available and is to be used for upcoming 3.1 e2e tests",
+    "description": "With early 2026 - the new EDC Version 0.12.0 will be available and is to be used for upcoming 3.1 e2e tests",
     "readMoreText": "Get Change Details",
-    "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/blob/main/CHANGELOG.md#030---2023-02-20"
+    "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/releases/tag/0.12.0-rc1"
   },
   {
     "id": "2",
-    "title": "Test of Release 3.1 starting on 03rd of April",
+    "title": "Test of Release 25.09 starting on 01st of October 2025",
     "subtitle": "ReDriveS",
     "description": "Next round of e2e Test is starting soon. Contact the Test Management to get part of it",
     "readMoreText": "",
