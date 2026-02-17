@@ -32,7 +32,7 @@
     }
   ],
   "dataSpace": {
-    "title": "Catena-X Dataspace",
+    "title": "ReDriveS Dataspace",
     "description": "The base concept of catena-x is the data exchange in a standardized format. This is reached by data sovereignty (explanation needed) and interoperability (link needed). Via data policies you can decide who can access data offers on several different levels",
     "sections": [
       {
@@ -80,7 +80,7 @@
       {
         "title": "Data Access policy based on Membership",
         "description": "The membership credential is used to validate if the data consumer is member of the dataspace. The membership credential is a 'must configure' credential for all data offers.<1></1><1></1>",
-        "imagePath": "/images/logos/cx-text.svg",
+        "imagePath": "/images/logos/logo-text.png",
         "backgroundColor": "#F9F9F9",
         "id": "membership-id",
         "template": "TextImageSideBySide"
@@ -110,7 +110,7 @@
       {
         "title": "Use Cases",
         "description": "Supported UseCase credentials: <1></1><1></1>* TraceabilityCredential<1></1><1></1>* QualityCredential<1></1><1></1>* CircularEconomyCredential<1></1><1></1>* PcfCredential<1></1><1></1>* DemandCapacityCredential<1></1><1></1>* PurisCredential<1></1><1></1>* BusinessPartnerCredential<1></1><1></1>* BehavioralTwinCredential<1></1><1></1>",
-        "imagePath": "/images/logos/cx-text.svg",
+        "imagePath": "/images/logos/logo-text.png",
         "backgroundColor": "#F9F9F9",
         "id": "usecase-id",
         "template": "TextImageSideBySide"
@@ -118,7 +118,7 @@
       {
         "title": "Roles",
         "description": "Supported UseCase credentials: <1></1><1></1>>> Attribute - CredentialSubjectItem <1></1><1></1>>> Dismantler - DismantlerCredential <1></1><1></1>",
-        "imagePath": "/images/logos/cx-text.svg",
+        "imagePath": "/images/logos/logo-text.png",
         "backgroundColor": "#FFFFFF",
         "id": "roles-id",
         "template": "TextImageSideBySide"

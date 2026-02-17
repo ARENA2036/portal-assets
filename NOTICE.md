@@ -51,7 +51,7 @@ This project uses the following font:
 
 This project uses the following image content:
 
-- Image: Catena-X Logo
+- Image: ReDriveS Logo
 - Source URL: https://catena-x.net
 
 - Image: German Edge Cloud Logo

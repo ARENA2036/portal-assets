@@ -32,7 +32,7 @@
     }
   ],
   "dataSpace": {
-    "title": "Catena-X Datenraum",
+    "title": "ReDriveS Datenraum",
     "description": "Das Grundkonzept von catena-x ist der Datenaustausch in einem standardisierten Format. Dies wird durch Datensouveränität und Interoperabilität erreicht. Über Datenrichtlinien können Sie auf mehreren Ebenen entscheiden, wer auf Datenangebote zugreifen kann.",
     "sections": [
       {
@@ -80,7 +80,7 @@
       {
         "title": "Datenzugriffsrichtlinie basierend auf dem Membership",
         "description": "Der Mitgliedschaftsnachweis wird verwendet, um zu überprüfen, ob der Datenkonsument Mitglied des Datenraums ist. Der Mitgliedsausweis ist ein 'muss' Berechtigungsnachweis für alle Datenangebote.<1></1><1></1>",
-        "imagePath": "/images/logos/cx-text.svg",
+        "imagePath": "/images/logos/logo-text.png",
         "backgroundColor": "#F9F9F9",
         "id": "membership-id",
         "template": "TextImageSideBySide"
@@ -110,7 +110,7 @@
       {
         "title": "Use Cases",
         "description": "Unterstützte UseCase-Anmeldeinformationen: <1></1><1></1>* TraceabilityCredential<1></1><1></1>* QualityCredential<1></1><1></1>* CircularEconomyCredential<1></1><1></1>* PcfCredential<1></1><1></1>* DemandCapacityCredential<1></1><1></1>* PurisCredential<1></1><1></1>* BusinessPartnerCredential<1></1><1></1>* BehavioralTwinCredential<1></1><1></1>",
-        "imagePath": "/images/logos/cx-text.svg",
+        "imagePath": "/images/logos/logo-text.png",
         "backgroundColor": "#F9F9F9",
         "id": "usecase-id",
         "template": "TextImageSideBySide"
@@ -118,7 +118,7 @@
       {
         "title": "Rollen",
         "description": "Dieser Text muss noch hinzugefügt werden.",
-        "imagePath": "/images/logos/cx-text.svg",
+        "imagePath": "/images/logos/logo-text.png",
         "backgroundColor": "#FFFFFF",
         "id": "roles-id",
         "template": "TextImageSideBySide"
