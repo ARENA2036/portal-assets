@@ -1,11 +1,11 @@
 [
   {
     "id": "1",
-    "title": "EDC 0.10.0 Major Version",
+    "title": "EDC 0.11.1 Major Version",
     "subtitle": "ARENA2036-X",
-    "description": "With June 2025 - the new EDC Version 0.10.x will be available and is to be used for upcoming e2e tests",
+    "description": "With Dec 2025 - the new EDC Version 0.10.x will be available and is to be used for upcoming e2e tests",
     "readMoreText": "Get Change Details",
-    "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/releases/tag/0.10.0"
+    "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/releases/tag/0.11.1"
   },
   {
     "id": "2",
