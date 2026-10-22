@@ -2,7 +2,7 @@
   {
     "id": "1",
     "title": "EDC 0.12.0 Major Version",
-    "subtitle": "ReDriveS",
+    "subtitle": "Furniture-X",
     "description": "With early 2026 - the new EDC Version 0.12.0 will be available and is to be used for upcoming 3.1 e2e tests",
     "readMoreText": "Get Change Details",
     "readMoreLink": "https://github.com/eclipse-tractusx/tractusx-edc/releases/tag/0.12.0-rc1"
@@ -10,7 +10,7 @@
   {
     "id": "2",
     "title": "Test of Release 25.09 starting on 01st of October 2025",
-    "subtitle": "ReDriveS",
+    "subtitle": "Furniture-X",
     "description": "Next round of e2e Test is starting soon. Contact the Test Management to get part of it",
     "readMoreText": "",
     "readMoreLink": ""
@@ -18,7 +18,7 @@
   {
     "id": "3",
     "title": "Lorem ipsum",
-    "subtitle": "ReDriveS",
+    "subtitle": "Furniture-X",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt",
     "readMoreText": "Read more",
     "readMoreLink": "#"

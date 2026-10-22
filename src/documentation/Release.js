@@ -75,11 +75,11 @@ const createDocsMetadata = (version) => {
   version ||= 'main'
 
   const DOCS = {
-    admin: 'ReDriveS Admin Documentation',
-    api: 'ReDriveS API Documentation',
-    architecture: 'ReDriveS Architecture Documentation',
-    developer: 'ReDriveS Developer Documentation',
-    user: 'ReDriveS Help Desk',
+    admin: 'Furniture-X Admin Documentation',
+    api: 'Furniture-X API Documentation',
+    architecture: 'Furniture-X Architecture Documentation',
+    developer: 'Furniture-X Developer Documentation',
+    user: 'Furniture-X Help Desk',
   }
 
   Object.entries(DOCS).forEach((item) => {

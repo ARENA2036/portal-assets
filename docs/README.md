@@ -1,6 +1,6 @@
 ### Portal Documentation
 
-The documentation of the ReDriveS Portal. Refer to the different sections:
+The documentation of the Furniture-X Portal. Refer to the different sections:
 
 - [Administration](./admin/)
 - [API](./api/)
