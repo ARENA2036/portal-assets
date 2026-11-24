@@ -1,7 +1,5 @@
-
 ###############################################################
 # Copyright (c) 2022 Contributors to the Eclipse Foundation
-# Copyright (c) 2026 ARENA2036 e.V.
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -24,33 +22,13 @@ name: build
 on:
   push:
     branches:
-      - develop
-      - main
-      - 'feature/**'
-      - 'bugfix/**'
-      - 'fix/**'
-      - 'hotfix/**'
-      - 'release/**'
-
-  workflow_call:
-    inputs:
-      image_tag:
-        description: "Optional Docker image tag"
-        required: false
-        type: string
-        default: ""
-
+      - 'main'
   workflow_dispatch:
-    inputs:
-      image_tag:
-        description: "Optional Docker image tag"
-        required: false
-        type: string
-        default: ""
 
 env:
-  IMAGE_NAMESPACE: 'harbor-hub-shared.arena.3ascloud.de/arena2036'
+  IMAGE_NAMESPACE: 'tractusx'
   IMAGE_NAME: 'portal-assets'
+  # variables needed for scripts/legal-notice.sh
   SERVER_URL: '${{ github.server_url }}'
   REPOSITORY: '${{ github.repository }}'
   REF_NAME: '${{ github.ref_name }}'
@@ -58,14 +36,12 @@ env:
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
-
     permissions:
-      packages: write
       contents: read
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Install Dependencies
         run: yarn --frozen-lockfile
@@ -80,48 +56,65 @@ jobs:
         run: yarn build
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@b5ca514318bd6ebac0fb2aedd5d36ec1b5c232a2 # v3.10.0
 
-      - name: Docker Login
-        uses: azure/docker-login@v2
+      - name: Login to DockerHub
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3.4.0
         with:
-          login-server: ${{ secrets.HBR_REGISTRY }}
-          username: ${{ secrets.HBR_USERNAME }}
-          password: ${{ secrets.HBR_PASSWORD }}
+          username: ${{ secrets.DOCKER_HUB_USER }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
+        uses: docker/metadata-action@902fa8ec7d6ecbf8d84d538b9b233a880e428804 # v5.7.0
         with:
           images: ${{ env.IMAGE_NAMESPACE }}/${{ env.IMAGE_NAME }}
           tags: |
+            type=raw,value=main
             type=raw,value=${{ github.sha }}
-            type=raw,value=${{ inputs.image_tag }},enable=${{ inputs.image_tag != '' }}
-
-      - name: Build Docker image for verification
-        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
-        with:
-          context: .
-          file: .conf/Dockerfile
-          platforms: linux/amd64
-          push: false
-          load: true
-          tags: portal-assets:test
-
-      - name: Verify nginx version
-        run: |
-          docker run --rm --entrypoint nginx portal-assets:test -v 2>&1 | tee nginx-version.txt
-          grep -Fx "nginx version: nginx/1.30.7" nginx-version.txt
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v3
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7.4.0
+        uses: docker/build-push-action@14487ce63c7a62a4a324b0bfb37086795e31c6c1 # v6.16.0
         with:
           context: .
           file: .conf/Dockerfile
-          platforms: linux/amd64,linux/arm64
-          push: true
+          platforms: linux/amd64, linux/arm64
+          push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      # https://github.com/peter-evans/dockerhub-description
+      - name: Update Docker Hub description
+        if: github.event_name != 'pull_request'
+        uses: peter-evans/dockerhub-description@432a30c9e07499fd01da9f8a49f0faf9e0ca5b77 # v4.0.2
+        with:
+          username: ${{ secrets.DOCKER_HUB_USER }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+          repository: ${{ env.IMAGE_NAMESPACE }}/${{ env.IMAGE_NAME }}
+          readme-filepath: '.conf/notice-assets.md'
+
+  auth-and-dispatch:
+    needs: build-and-push-image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get token
+        id: get_workflow_token
+        uses: peter-murray/workflow-application-token-action@d17e3a9a36850ea89f35db16c1067dd2b68ee343 # v4.0.1
+        with:
+          application_id: ${{ secrets.ORG_PORTAL_DISPATCH_APPID }}
+          application_private_key: ${{ secrets.ORG_PORTAL_DISPATCH_KEY }}
+
+      - name: Trigger workflow
+        id: call_action
+        env:
+          TOKEN: ${{ steps.get_workflow_token.outputs.token }}
+        run: |
+          curl -v \
+            --request POST \
+            --url https://api.github.com/repos/eclipse-tractusx/portal/actions/workflows/portal-assets-image-update.yml/dispatches \
+            --header "authorization: Bearer $TOKEN" \
+            --header "Accept: application/vnd.github.v3+json" \
+            --data '{"ref":"main", "inputs": { "new-image":"${{ github.sha }}" }}' \
+            --fail
