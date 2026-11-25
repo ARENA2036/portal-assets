@@ -37,7 +37,7 @@ WORKDIR /public/documentation
 RUN find . -type f | cut -c 3- | sort > index.txt
 
 # Step 2
-FROM nginxinc/nginx-unprivileged:alpine
+FROM nginx/nginx-unprivileged:1.30.7-alpine
 COPY .conf/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build-step /public/assets /usr/share/nginx/html/assets
 COPY --from=build-step /public/documentation /usr/share/nginx/html/documentation
